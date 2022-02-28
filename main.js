@@ -1,14 +1,14 @@
-// var bezos = document.getElementById('bezos');
-// var bezos_counter = document.getElementById('bezos-counter');
-// var bezosCounterStart = document.getElementById('bezos-counter-start');
+var bezos = document.getElementById('bezos');
+var bezos_counter = document.getElementById('bezos-counter');
+var bezosCounterStart = document.getElementById('bezos-counter-start');
 
-var four_hundred = document.getElementById('four-hundred');
-var four_hundred_counter = document.getElementById('four-hundred-counter');
-var four_hundred_counter_start = document.getElementById('four-hundred-counter-start');
+// var four_hundred = document.getElementById('four-hundred');
+// var four_hundred_counter = document.getElementById('four-hundred-counter');
+// var four_hundred_counter_start = document.getElementById('four-hundred-counter-start');
 
-var sixtyPercent = document.getElementById('sixty-percent');
-var sixtyPercentIndicator = document.getElementById('sixty-percent-indicator');
-var sixtyPercentScrollPercentage = 0.0;
+// var sixtyPercent = document.getElementById('sixty-percent');
+// var sixtyPercentIndicator = document.getElementById('sixty-percent-indicator');
+// var sixtyPercentScrollPercentage = 0.0;
 // var babies = document.getElementById('babies-wrapper');
 // var baby_counter = document.getElementById('baby-counter');
 
@@ -20,21 +20,6 @@ var money = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
 });
 var additional_instructions_shown = false;
-
-
-
-// function toBottom()
-// {
-//     console.log('OnLoad');
-//     window.scrollTo(0, document.body.scrollHeight);
-// }
-// window.onload=toBottom;
-
-window.addEventListener('click', (event) => {
-    window.scrollTo(0, document.body.scrollHeight);
-    console.log("scroll down: ", document.body.scrollHeight)
-});
-
 
 function detect_confused_user(e, timer) {
   if (!additional_instructions_shown) {
@@ -64,25 +49,25 @@ window.addEventListener('scroll', function(){
   update_wealth_counter();
 });
 
-function generate_sixty_percent() {
-  for (var i = 0; i < 100; i++) {
-    var node = document.createElement("div");
-    node.classList = "people";
-    if (i === 0) {
-      node.classList += " first";
-    }
-    document.getElementById("sixty-percent").appendChild(node);
-  }
-}
-generate_sixty_percent();
+// function generate_sixty_percent() {
+//   for (var i = 0; i < 100; i++) {
+//     var node = document.createElement("div");
+//     node.classList = "people";
+//     if (i === 0) {
+//       node.classList += " first";
+//     }
+//     document.getElementById("sixty-percent").appendChild(node);
+//   }
+// }
+// generate_sixty_percent();
 
-sixtyPercent.addEventListener('scroll', function(){
-  let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 60).toFixed(1);
-  if (sixtyPercentScrollPercentage !== newScroll) {
-    sixtyPercentScrollPercentage = newScroll;
-    sixtyPercentIndicator.innerHTML = newScroll + '%';
-  }
-})
+// sixtyPercent.addEventListener('scroll', function(){
+//   let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 60).toFixed(1);
+//   if (sixtyPercentScrollPercentage !== newScroll) {
+//     sixtyPercentScrollPercentage = newScroll;
+//     sixtyPercentIndicator.innerHTML = newScroll + '%';
+//   }
+// })
 // babies.addEventListener('scroll', function(){
 //   let is_mobile = window.innerWidth <= 450;
 //   let bg_size = (is_mobile) ? 68 : 160;
@@ -90,30 +75,30 @@ sixtyPercent.addEventListener('scroll', function(){
 // })
 
 function update_wealth_counter() {
-  // if (bezos_viewable()) {
-  //   if (bezos_counter_viewable()) {
-  //     let wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
-  //     bezos_counter.innerHTML = (wealth < 185000000000) ? money.format(wealth) : "$185,000,000,000";
-  //   }
-  //   else {
-  //     bezos_counter.innerHTML = '';
-  //   }
-  // }
-  if (four_hundred_viewable()) {
-    if (four_hundred_counter_viewable()) {
-      let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
-      four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
+  if (bezos_viewable()) {
+    if (bezos_counter_viewable()) {
+      let wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
+      bezos_counter.innerHTML = (wealth < 185000000000) ? money.format(wealth) : "$185,000,000,000";
     }
     else {
-      four_hundred_counter.innerHTML = '';
+      bezos_counter.innerHTML = '';
     }
   }
-  // function bezos_viewable() {
-  //   return window.scrollX < bezos.offsetLeft + bezos.offsetWidth + 100;
+  // else if (four_hundred_viewable()) {
+  //   if (four_hundred_counter_viewable()) {
+  //     let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
+  //     four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
+  //   }
+  //   else {
+  //     four_hundred_counter.innerHTML = '';
+  //   }
   // }
-  // function bezos_counter_viewable() {
-  //   return bezosCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
-  // }
+  function bezos_viewable() {
+    return window.scrollX < bezos.offsetLeft + bezos.offsetWidth + 100;
+  }
+  function bezos_counter_viewable() {
+    return bezosCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
+  }
   function four_hundred_viewable() {
     return window.scrollX < four_hundred.offsetLeft + four_hundred.offsetWidth + 100;
   }
@@ -124,5 +109,71 @@ function update_wealth_counter() {
 function toggleZoom() {
   document.getElementById('line-chart').classList.toggle('zoom');
 }
+
+function pageScroll() {
+  window.scrollBy(5,0);
+  scrolldelay = setTimeout(pageScroll,100);
+}
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+scrollButton = document.getElementById("autoScroll");
+
+
+// scrollButton.addEventListener('click', test());
+// var doscroll = false;
+// var myTimeout;
+// function test(){
+//   console.log("toggled");
+// }
+// function toggleScroll(){
+//   doscroll = !doscroll;
+//   console.log(doscroll);
+//   console.log("clicked");
+//   if (doscroll){
+//     // autoScroll();
+//     window.scrollBy(5,0);
+    
+//   } else {
+//     // stopScroll();
+//     clearTimeout(myTimeout);
+//   }
+// }
+
+function autoScroll() {
+  window.scrollBy(5,0);
+  myTimeout = setTimeout(autoScroll, 10)
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+
+// When the user clicks on the button, scroll to the top of the document
+function leftFunction() {
+  document.body.scrollLeft = 0; // For Safari
+  document.documentElement.scrollLeft = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+
+function scrollFunction() {
+  if (document.body.scrollLeft > 20 || document.documentElement.scrollLeft > 20) {
+    mybutton.style.display = "block";
+    scrollButton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    scrollButton.style.display = "none";
+  }
+  if (document.body.scrollLeft > 20 || document.documentElement.scrollLeft > 20) {
+    mybutton.style.display = "block";
+    scrollButton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    scrollButton.style.display = "none";
+  }
+}
+
 
 

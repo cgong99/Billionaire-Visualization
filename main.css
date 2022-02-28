@@ -1,11 +1,14 @@
 body, html {
   margin: 0;
+  background-image: url("img/night.png");
+  background-size: cover;
 }
 body,
 html,
 .wealth-wrapper-outer
 .wealth-row {
   min-height: 100%;
+
 }
 .title-screen {
   width: 100vw;
@@ -17,6 +20,47 @@ h1 {
   width: 100%;
   margin-top: 100px;
 }
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: grey; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#autoScroll {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 100px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: burlywood; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#autoScroll:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
 .scroll-this-way {
   align-self: flex-end;
   width: 360px;
@@ -62,55 +106,16 @@ h1 {
   40% {background-position: 50px 40px;}
   100% {background-position: 50px 40px;}
 }
-
-/* billioniare */
-
-.welcome {
-  width: 500px;
-  height: 150px;
-  bottom: 500px;
-}
-
-.title {
-
-  bottom: 20px;
-}
-
-
-.Musk {
-  /*chen change here for the people box*/
-  width: 500px;
-  height: 5000px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.climbing-wealth {
-  /* chen for the four hundred chunk*/
-  margin-left: 5000px;
-  /* width: 6401200px; */
-  width: 500px;
-  height: 444800px;
-  bottom: 20px;
-  background-color: white;
-}
-
-.cash {
-  background-image: url('img/cash1.svg');
-  background-size: 20px;
-}
-
-
 .wealth-wrapper-outer {
+  
   font-family: sans-serif;
   overflow: visible;
   display: inline-block;
 }
 .center-sticky {
-  /*chen*/
   position: sticky;
   left: 50%;
-  transform: translate(-10%, 0);
+  transform: translate(-50%, 0);
 }
 .navigation {
   position: fixed;
@@ -159,7 +164,9 @@ h1 {
 
 
 .wealth-row {
+  /* chen here for the row*/
   display: inline-flex;
+
 }
 .arrow {
   margin-left: -6px;
@@ -173,7 +180,9 @@ h1 {
   align-items: center;
   display: flex;
 }
-
+.title {
+  margin-bottom: 5px;
+}
 .billion .wealth > .wealth-title {
   flex-basis: 110px;
   position: static;
@@ -332,34 +341,34 @@ h1 {
 .billion .wealth {
   width: 2000px;
   height: 500px;
-  /* background-color: #03A9F4; */
+  background-color: #03A9F4;
 }
 @media (max-width: 450px) {
   .billion .wealth {
-    border-bottom: 3px dotted 
-    /* #007fb7; */
+    border-bottom: 3px dotted #007fb7;
   }
 }
 .bezos .wealth {
-  width: 370000px;
+  /* width: 370000px; */
+  width: 5000px;
   height: 500px;
-  background-color: orange;
+  /* background-image: url("img/night.png");
+  background-repeat: repeat-x; */
+  background-color: white;
+
 }
 .four-hundred .wealth {
-  /* chen for the four hundred chunk*/
-  margin-left: 5000px;
-  /* width: 6401200px; */
-  width: 500px;
-  height: 444800px;
-  bottom: 20px;
-  background-color: white;
+  margin-left: 100px;
+  width: 6401200px;
+  height: 500px;
+  background-color: #03A9F4;
 }
 .ruler {
   background-image: url('img/ruler.svg');
+  /* background-image: url('img/night.png'); */
   background-repeat: repeat-x;
-  background-position: 0 100px;
+  background-position: 0 470px;
 }
-
 .key {
   position: absolute;
   top: 450px;
@@ -376,9 +385,9 @@ h1 {
 .bezos .key > span {
   background-color: orange;
 }
-/* .four-hundred .key > span {
+.four-hundred .key > span {
   background-color: #03A9F4;
-} */
+}
 .shadow {
   box-shadow: -3px 5px 10px;
 }
@@ -435,8 +444,8 @@ h1 {
 .year-chemo .square {
   height: 400px;
   width: 22500px;
-  /* background-color: #03A9F4;
-  border: 5px dashed #0078af; */
+  background-color: #03A9F4;
+  border: 5px dashed #0078af;
   box-sizing: border-box;
 }
 .year-chemo .square .title {
@@ -448,9 +457,9 @@ h1 {
 .year-chemo .key {
   top: 310px;
 }
-/* .year-chemo .key > span {
+.year-chemo .key > span {
   background-color: #03A9F4;
-} */
+}
 .celebrities {
   display: flex;
   width: auto;
@@ -551,7 +560,7 @@ h1 {
   max-width: 390px;
 }
 .people {
-  background-image: url('img/cash1.svg');
+  background-image: url('img/person.svg');
   background-size: 20px;
 }
 .people.first {
@@ -564,9 +573,8 @@ h1 {
   margin: 5px;
 }
 .people-wrapper {
-  /*chen change here for the people box*/
-  width: 500px;
-  height: 444800px;
+  width: 800px;
+  height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -575,13 +583,12 @@ h1 {
   height: 400px;
 }
 .sixty-percent-people .people {
-  /*chen*/
-  width: 400px;
-  height: 5000px;
+  width: 800px;
+  height: 1974000px;
 }
-/* .sixty-percent-people .people-wrapper {
+.sixty-percent-people .people-wrapper {
   box-shadow: inset 0 0 10px #000000;
-} */
+}
 .bubble {
   border-radius: 10px;
   font-weight: bold;
@@ -666,7 +673,123 @@ h1 {
   font-size: 25px;
   font-weight: bold;
 }
-
+.piechart {
+  position: relative;
+}
+.piechart .piechart-outer {
+  width: 300px;
+  height: 300px;
+  transform: rotate(-50deg);
+  background: yellowgreen;
+  border-radius: 50%;
+}
+.piechart .piechart-inner {
+  fill: yellowgreen;
+  stroke: #655;
+  stroke-width: 32;
+}
+@media (max-width: 450px) {
+  .piechart.piechart h2 {
+    font-size: 17px;
+  }
+}
+.point-zero-three-percent .piechart-inner {
+  stroke-dasharray: .03 100;
+}
+.two-point-seven-percent .piechart-inner {
+  stroke-dasharray: 2.7 100;
+}
+.three-percent .piechart-inner {
+  stroke-dasharray: 3 100;
+}
+.five-percent .piechart-inner {
+  stroke-dasharray: 5 100;
+}
+.five-point-three-percent .piechart-inner {
+  stroke-dasharray: 5.3 100;
+}
+.six-percent .piechart-inner {
+  stroke-dasharray: 6 100;
+}
+.seven-point-five-percent .piechart-inner {
+  stroke-dasharray: 7.5 100;
+}
+.six-percent .piechart-outer {
+  transform: rotate(-45deg);
+}
+.six-point-eight-percent .piechart-inner {
+  stroke-dasharray: 6.8 100;
+}
+.three-percent .piechart-outer,
+.two-point-five-percent .piechart-outer,
+.two-point-seven-percent .piechart-outer,
+.two-point-eight-percent .piechart-outer {
+  transform: rotate(-38deg);
+}
+.five-percent .piechart-outer,
+.four-percent .piechart-outer {
+  transform: rotate(-43deg);
+}
+.four-tenths-percent .piechart-outer {
+  transform: rotate(-34deg);
+}
+.seven-point-five-percent .piechart-outer,
+.six-point-three-percent .piechart-outer {
+  transform: rotate(-46deg);
+}
+.four-tenths-percent .piechart-inner {
+  stroke-dasharray: .4 100;
+}
+.two-point-five-percent .piechart-inner {
+  stroke-dasharray: 2.5 100;
+}
+.two-point-eight-percent .piechart-inner {
+  stroke-dasharray: 2.8 100;
+}
+.four-point-three-percent .piechart-inner {
+  stroke-dasharray: 4.3 100;
+}
+.six-point-three-percent .piechart-inner {
+  stroke-dasharray: 6.3 100;
+}
+.four-point-eight-percent .piechart-inner {
+  stroke-dasharray: 4.8 100;
+}
+.forty-percent .piechart-inner {
+  stroke-dasharray: 40 100;
+}
+.piechart .dotted-line {
+  position: absolute;
+  width: 80px;
+  height: 0;
+  top: 40px;
+  left: 270px;
+  border-top: 2px dashed black;
+  transform: rotate(-38deg);
+}
+.piechart .label {
+  position: absolute;
+  left: 347px;
+  top: -7px;
+  font-size: 24px;
+}
+.piechart h2 {
+  font-size: 20px;
+}
+@media (max-width: 450px) {
+  .piechart .label {
+    left: 277px;
+    top: 43px;
+    font-size: 18px;
+  }
+  .piechart .dotted-line {
+    display: none;
+  }
+}
+.piechart .description {
+  width: 300px;
+  text-align: center;
+}
 .about {
   visibility: hidden;
   transition: opacity .7s;
@@ -694,8 +817,121 @@ h1 {
   transition: height .7s, width .7s;
   background-color: white;
 }
-
-
+.modal-text {
+  width: calc(90vw - 40px);
+  height: calc(95vh - 40px);
+  overflow: visible;
+  padding: 20px;
+}
+.about.open .modal-inner,
+.about.open .modal-inner {
+  height: 95vh;
+  width: 90vw;
+}
+.malaria .babies {
+  height: 8800320px;
+  background-size: 160px;
+  background-image: url(img/baby.svg);
+}
+.malaria .babies-wrapper {
+  box-shadow: inset 0 0 10px #00000042;
+  width: 800px;
+  height: 320px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.baby-counter {
+  top: 127px;
+  position: sticky;
+  display: inline-block;
+  left: 350px;
+  margin-top: 1800px;
+}
+@media (max-width: 450px) {
+  .malaria .babies-wrapper {
+    max-width: 340px;
+    height: 340px;
+  }
+  .malaria .babies {
+    background-size: 68px;
+    height: 3740340px;
+  }
+  .scroll-indicator {
+    top: 38%;
+    left: 40px;
+  }
+  .baby-counter {
+    left: 135px;
+  }
+}
+.infectious {
+  display: flex;
+  align-items: center;
+}
+.ebola-bar {
+  max-width: 300px;
+}
+.ebola-bar .title {
+  max-width: 100%;
+}
+.ebola-bar .square {
+  height: 122px;
+  width: 122px;
+  background-color: #00bb42;
+}
+.corona-bar .title,
+.malaria-bar .title {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.malaria-bar .square {
+  height: 400px;
+  width: 1022px;
+  background-color: #66c35a;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.corona-bar .square {
+  height: 400px;
+  width: 500px;
+  background-color: green;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.corona-bar,
+.malaria-bar,
+.ebola-bar {
+  color: black;
+  margin: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+@media (max-width: 450px) {
+  h3 {
+    font-size: 14px;
+  }
+}
+.cares .chart {
+  text-align: center;
+}
+.worldchart-wrapper {
+  display: flex;
+}
+.worldchart {
+  text-align: center;
+  width: 320px;
+}
+.worldchart img {
+  max-width: 100%;
+}
+.worldchart-wrapper .description {
+  text-align: center;
+}
 .all-of-them .title {
   width: 370px;
 }
