@@ -1,7 +1,8 @@
 body, html {
   margin: 0;
-  background-image: url("img/night.png");
-  background-size: cover;
+  /* background-image: url("img/night.png");
+  background-size: cover; */
+  color: blue;
 }
 body,
 html,

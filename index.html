@@ -3,6 +3,9 @@
 <head>
 
   <title>Wealth, shown to scale</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <meta name="description" content="Inequality in the United States is out of control. Here we visualize the issue in a unique way." />
 
   <meta name="twitter:card" content="summary_large_image">
@@ -57,7 +60,7 @@
       <div name="bezos" class="wealth-wrapper bezos">
         <button onclick="leftFunction()" id="myBtn" title="Go Back">Back</button>
 
-        <button onclick="autoScroll()" id="autoScroll" title="Auto">Auto</button>
+        <button onclick="toggleScroll()" id="autoScroll" title="Auto">Auto</button>
 
         <div id="bezos" class="wealth ruler">
           <h2 class="wealth-title">$185 billion (wealth of Jeff Bezos)</h2>

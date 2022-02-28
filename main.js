@@ -120,25 +120,29 @@ mybutton = document.getElementById("myBtn");
 scrollButton = document.getElementById("autoScroll");
 
 
-// scrollButton.addEventListener('click', test());
-// var doscroll = false;
-// var myTimeout;
-// function test(){
-//   console.log("toggled");
-// }
-// function toggleScroll(){
-//   doscroll = !doscroll;
-//   console.log(doscroll);
-//   console.log("clicked");
-//   if (doscroll){
-//     // autoScroll();
-//     window.scrollBy(5,0);
-    
-//   } else {
-//     // stopScroll();
-//     clearTimeout(myTimeout);
-//   }
-// }
+scrollButton.addEventListener('click', test());
+var doscroll = false;
+var myTimeout;
+function test(){
+  console.log("toggled");
+}
+function toggleScroll(){
+  if (doscroll) {
+    doscroll = false;
+  } else {
+    doscroll = true;
+  }
+  console.log(doscroll);
+  console.log("clicked");
+  if (doscroll){
+    // autoScroll();
+    window.scrollBy(5,0);
+    myTimeout = setTimeout(autoScroll, 10)
+  } else {
+    // stopScroll();
+    clearTimeout(myTimeout);
+  }
+}
 
 function autoScroll() {
   window.scrollBy(5,0);
