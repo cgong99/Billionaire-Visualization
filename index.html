@@ -18,72 +18,89 @@ sadfsafa<!DOCTYPE html>
   <meta property="og:image" content="https://mkorostoff.github.io/1-pixel-wealth/img/off-the-chart.png" />
 
   <link rel="stylesheet" type="text/css" href="main.css?version=1.10">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 <body>
 
   <div class="wealth-wrapper-outer">
     <div class="wealth-row wealth-row-one">
-<!--       <div class="title-screen">
-        <h1>Wealth shown to scale</h1>
-        <div id="titlecard">
-            <img src="https://raw.githubusercontent.com/cgong99/Billionaire-Visualization/master/img/main_title_trans.svg">
-        </div>
-        <div class="scroll-this-way">
-          <span>scroll right</span>
-          <div id="instructions" class="instructions">To scroll right, use shift + mousewheel. If you have a touchpad, swipe sideways.</div>
-        </div>
-      </div> -->
-      <div id="titlecard">
-        <img src="https://raw.githubusercontent.com/cgong99/Billionaire-Visualization/master/img/main_title_trans.svg">
-      </div>
 
+      <div id="titlecard">
+        <img src="https://raw.githubusercontent.com/cgong99/Billionaire-Visualization/master/img/main_title.svg">
+      </div>
+<!-- 
       <div class="wealth-wrapper scaler">
         <div class="scalewrap">
           <img src="https://raw.githubusercontent.com/cgong99/Billionaire-Visualization/master/img/scale.svg">
         </div>
       </div>
-
-
-      <div name="bezos" class="wealth-wrapper bezos">
-        <button onclick="leftFunction()" id="myBtn" title="Go Back">Back</button>
+      
+      <div class="wealth-wrapper scaler">
+        <div class="scalewrap">
+          <img src="https://raw.githubusercontent.com/cgong99/Billionaire-Visualization/master/img/speed.svg">
+        </div>
+      </div>
+ -->
+<button onclick="leftFunction()" id="myBtn" title="Go Back">Back</button>
         <button onclick="speed1()" id="Speed1" title="Speed1">1x</button>
         <button onclick="speed2()" id="Speed2" title="Speed2">2x</button>
         <button onclick="speed3()" id="Speed3" title="Speed3">3x</button>
         
-        <div class="loading-window">
-    <div class="car">
-        <div class="strike"></div>
-        <div class="strike strike2"></div>
-        <div class="strike strike3"></div>
-        <div class="strike strike4"></div>
-        <div class="strike strike5"></div>
-        <div class="car-detail spoiler"></div>
-        <div class="car-detail back"></div>
-        <div class="car-detail center"></div>
-        <div class="car-detail center1"></div>
-        <div class="car-detail front"></div>
-        <div class="car-detail wheel"></div>
-        <div class="car-detail wheel wheel2"></div>
-    </div>
-</div>
+      
+      
+
+<!--          <div class="text-infobox infobox intro"> -->
+           <div class="wealth-wrapper billion ruler">
+              <div class="wealth">
+              <h2 class="wealth-title">$1 billion</h2>
+              </div>
+           </div>
+<!--             </div> -->
+<!--             <div class="infobox infobox-half lifetime">
+            <div class="title-square-wrapper">
+              <div class="title">1 Billion</div>
+              <div class="square"></div>
+            </div>
+          </div>  -->
+        
+
+      
+      <div name="bezos" class="wealth-wrapper bezos">
         
         <div id="bezos" class="wealth ruler">
-          <h2 class="wealth-title">$185 billion (wealth of Jeff Bezos)</h2>
+           
+          <h2 class="wealth-title">$224 billion (wealth of Elon Musk)</h2>
+           <div class="loading-window">
+              <div class="car">
+                  <div class="strike"></div>
+                  <div class="strike strike2"></div>
+                  <div class="strike strike3"></div>
+                  <div class="strike strike4"></div>
+                  <div class="strike strike5"></div>
+                  <div class="car-detail spoiler"></div>
+                  <div class="car-detail back"></div>
+                  <div class="car-detail center"></div>
+                  <div class="car-detail center1"></div>
+                  <div class="car-detail front"></div>
+                  <div class="car-detail wheel"></div>
+                  <div class="car-detail wheel wheel2"></div>
+              </div>
+            </div>
           <div class="counter" id="bezos-counter"></div>
           <div class="key">
             <span>$80 million</span>
           </div>
 
-          <!-- <div class="text-infobox infobox first">
-            <div class="title">Jeff is so wealthy, that it is quite literally unimaginable.</div>
+         <div class="text-infobox infobox first">
+            <div class="title">Every 10 pixels you scroll is $5 million.</div>
           </div>
 
-          <div class="text-infobox infobox">
+<!--           <div class="text-infobox infobox">
             <div class="title">We rarely see wealth inequality represented to scale. This is part of the reason Americans <a href="https://www.ncbi.nlm.nih.gov/pubmed/26162108" target="_blank">consistently under-estimate</a> the relative wealth of the super rich.</div>
-          </div>
+          </div> -->
 
-          <div class="five-pixels text-infobox infobox-half infobox">
+          <!-- <div class="five-pixels text-infobox infobox-half infobox">
             <div class="title">Every 10 pixels you scroll is $5 million.</div>
           </div>
 
@@ -100,16 +117,11 @@ sadfsafa<!DOCTYPE html>
 
           <div class="text-infobox infobox infobox-half">
             <div class="title">Let's put this wealth in perspective by comparing it to some familiar things.</div>
-          </div>
+          </div> -->
 
-          <div class="infobox infobox-half lifetime">
-            <div class="title-square-wrapper">
-              <div class="title">All the money you will ever earn in your entire life from the day you are born until the day you die (about $1.7 million)</div>
-              <div class="square"></div>
-            </div>
-          </div>
 
-          <div class="infobox infobox-half healthcare">
+
+          <!-- <div class="infobox infobox-half healthcare">
             <div class="title-square-wrapper">
               <div class="title">Annual cost of health care for a family of four</div>
               <div class="square"></div>
@@ -160,28 +172,41 @@ sadfsafa<!DOCTYPE html>
             <div class="sub-infobox tim-cook">
               <div class="title">Wealth of Apple CEO Tim Cook ($625 million)</div>
               <div class="square shadow"></div>
+            </div> -->
+
+          <div class="infobox infobox-quarter tesla">
+            <div class="title-square-wrapper">
+              <div class="title">Average annual salary of Tesla employees(~$160,000)</div>
+              <div class="square"></div>
             </div>
-
-            <div class="column-infobox">
-              <div class="sub-infobox doctor small">
-                <div class="title">Lifetime earnings of a doctor, on average ($6.7 million)</div>
-                <div class="square shadow"></div>
-              </div>
-
-              <div class="sub-infobox lawyer small">
-                <div class="title">Lifetime earnings of a lawyer, on average ($4 million)</div>
-                <div class="square shadow"></div>
-              </div>
-            </div>
-
-            <div class="sub-infobox hedgefund">
-              <div class="title">Lifetime earnings of a hedge fund manager, on average ($84 million)</div>
+          </div>
+          
+          <div class="infobox infobox-quarter tesla">
+            <img src="https://raw.githubusercontent.com/cgong99/Billionaire-Visualization/master/img/lifetime_income.svg">
+          </div>
+          
+          <div class="infobox-quarter">
+            <div class="sub-infobox SpaceX">
+              <div class="title">SpaceX's Falcon 9 rocket costs $62 million per launch.</div>
               <div class="square shadow"></div>
             </div>
-
+          </div>
+          
+            
+            <div class="infobox-quarter">
+            <div class="sub-infobox Kanye-West">
+              <div class="title">Wealth of Kanye West: $1.8 billion </div>
+              <div class="square shadow"></div>
+            </div>
           </div>
 
-          <div class="infobox infobox-close text-infobox">
+          <div class="text-infobox infobox first">
+           <div class="sub-infobox Tim-Cook">
+              <div class="title">Tim Cook Net Worth: $20 billion </div>
+              <div class="square shadow"></div>
+            </div>
+          </div>
+          <!--   <div class="infobox infobox-close text-infobox">
             <div class="title">
               <p>These people may see themselves as fabulously rich, and often oppose policies aimed at reducing inequality.</p>
             </div>

@@ -49,16 +49,6 @@ window.addEventListener('scroll', function(){
   update_wealth_counter();
 });
 
-// function generate_sixty_percent() {
-//   for (var i = 0; i < 100; i++) {
-//     var node = document.createElement("div");
-//     node.classList = "people";
-//     if (i === 0) {
-//       node.classList += " first";
-//     }
-//     document.getElementById("sixty-percent").appendChild(node);
-//   }
-// }
 // generate_sixty_percent();
 
 // sixtyPercent.addEventListener('scroll', function(){
@@ -73,17 +63,24 @@ window.addEventListener('scroll', function(){
 //   let bg_size = (is_mobile) ? 68 : 160;
 //   baby_counter.innerHTML = thousand.format(Math.floor(babies.scrollTop / bg_size * 5));
 // })
-
+function Elon_Musk_viewable() {
+    return window.scrollX > bezos.offsetLeft - window.innerWidth + 1000;
+}
 function update_wealth_counter() {
-  if (bezos_viewable()) {
-    if (bezos_counter_viewable()) {
-      let wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
-      bezos_counter.innerHTML = (wealth < 185000000000) ? money.format(wealth) : "$185,000,000,000";
+  if (Elon_Musk_viewable()) {
+
+      let wealth = calculate();
+    if (wealth>0){
+            bezos_counter.innerHTML = (wealth < 224000000000) ?money.format(wealth) : "$224,000,000,000";
+    } else {
+      bezos_counter.innerHTML = '';
+    }
+
     }
     else {
       bezos_counter.innerHTML = '';
     }
-  }
+  
   // else if (four_hundred_viewable()) {
     // if (four_hundred_counter_viewable()) {
     //   let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
@@ -93,11 +90,13 @@ function update_wealth_counter() {
   //     four_hundred_counter.innerHTML = '';
   //   }
   // }
-  function bezos_viewable() {
-    return window.scrollX < bezos.offsetLeft + bezos.offsetWidth + 100;
-  }
-  function bezos_counter_viewable() {
-    return bezosCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
+
+  // function bezos_counter_viewable() {
+  //   return bezosCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
+  // }
+  function calculate(){
+    var wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
+    return wealth
   }
   function four_hundred_viewable() {
     return window.scrollX < four_hundred.offsetLeft + four_hundred.offsetWidth + 100;
@@ -118,12 +117,13 @@ scrollButton = document.getElementById("Speed1");
 scrollButton2 = document.getElementById("Speed2");
 scrollButton3 = document.getElementById("Speed3");
 
-scrollButton.addEventListener('click', test());
+// scrollButton.addEventListener('click', test());
+// function test(){
+//   console.log("toggled");
+// }
 var doscroll = false;
 var myTimeout;
-function test(){
-  console.log("toggled");
-}
+
 
 function speed1(){
   toggleScroll();
@@ -195,12 +195,13 @@ window.onscroll = function() {scrollFunction()};
 function leftFunction() {
   document.body.scrollLeft = 0; // For Safari
   document.documentElement.scrollLeft = 0; // For Chrome, Firefox, IE and Opera
+  clearTimeout(myTimeout);
 }
 
 
-car = document.getElementsByClassName('car');
+car = document.getElementsByClassName('car')[0];
 function scrollFunction() {
-  if (document.body.scrollLeft > 100 || document.documentElement.scrollLeft > 100) {
+  if (Elon_Musk_viewable()) {
     mybutton.style.display = "block";
     scrollButton.style.display = "block";
     scrollButton2.style.display = "block";
@@ -213,19 +214,8 @@ function scrollFunction() {
     scrollButton3.style.display = "none";
     car.style.display = "none";
   }
-  if (document.body.scrollLeft > 100 || document.documentElement.scrollLeft > 100) {
-    mybutton.style.display = "block";
-    scrollButton.style.display = "block";
-    scrollButton2.style.display = "block";
-    scrollButton3.style.display = "block";
-    car.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-    scrollButton.style.display = "none";
-    scrollButton2.style.display = "none";
-    scrollButton3.style.display = "none";
-    car.style.display = "none";
-  }
+
+
 }
 
 
