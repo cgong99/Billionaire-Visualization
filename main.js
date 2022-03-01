@@ -2,16 +2,6 @@ var bezos = document.getElementById('bezos');
 var bezos_counter = document.getElementById('bezos-counter');
 var bezosCounterStart = document.getElementById('bezos-counter-start');
 
-// var four_hundred = document.getElementById('four-hundred');
-// var four_hundred_counter = document.getElementById('four-hundred-counter');
-// var four_hundred_counter_start = document.getElementById('four-hundred-counter-start');
-
-// var sixtyPercent = document.getElementById('sixty-percent');
-// var sixtyPercentIndicator = document.getElementById('sixty-percent-indicator');
-// var sixtyPercentScrollPercentage = 0.0;
-// var babies = document.getElementById('babies-wrapper');
-// var baby_counter = document.getElementById('baby-counter');
-
 var thousand = new Intl.NumberFormat('en-US')
 var money = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -49,20 +39,6 @@ window.addEventListener('scroll', function(){
   update_wealth_counter();
 });
 
-// generate_sixty_percent();
-
-// sixtyPercent.addEventListener('scroll', function(){
-//   let newScroll = ((sixtyPercent.scrollTop / sixtyPercent.scrollHeight) * 60).toFixed(1);
-//   if (sixtyPercentScrollPercentage !== newScroll) {
-//     sixtyPercentScrollPercentage = newScroll;
-//     sixtyPercentIndicator.innerHTML = newScroll + '%';
-//   }
-// })
-// babies.addEventListener('scroll', function(){
-//   let is_mobile = window.innerWidth <= 450;
-//   let bg_size = (is_mobile) ? 68 : 160;
-//   baby_counter.innerHTML = thousand.format(Math.floor(babies.scrollTop / bg_size * 5));
-// })
 function Elon_Musk_viewable() {
     return window.scrollX > bezos.offsetLeft - window.innerWidth + 1000;
 }
@@ -81,19 +57,6 @@ function update_wealth_counter() {
       bezos_counter.innerHTML = '';
     }
   
-  // else if (four_hundred_viewable()) {
-    // if (four_hundred_counter_viewable()) {
-    //   let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
-    //   four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
-    // }
-  //   else {
-  //     four_hundred_counter.innerHTML = '';
-  //   }
-  // }
-
-  // function bezos_counter_viewable() {
-  //   return bezosCounterStart.offsetLeft - window.scrollX < (window.innerWidth);
-  // }
   function calculate(){
     var wealth = (window.scrollX - bezos.offsetLeft + 175) * 500000;
     return wealth
