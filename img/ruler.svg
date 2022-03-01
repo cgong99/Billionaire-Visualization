@@ -1,75 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="184 193 161 60" width="161" height="60">
-  <defs/>
-  <metadata> Produced by OmniGraffle 7.12.1 
-    <dc:date>2019-11-26 00:52:58 +0000</dc:date>
-  </metadata>
-  <g id="Canvas_1" fill-opacity="1" stroke-dasharray="none" fill="none" stroke-opacity="1" stroke="none">
-    <title>Canvas 1</title>
-    <g id="Canvas_1: Layer 1">
-      <title>Layer 1</title>
-      <g id="Graphic_7"/>
-      <g id="Graphic_9"/>
-      <g id="Graphic_11"/>
-      <g id="Graphic_2"/>
-      <g id="Graphic_3">
-        <rect x="184.3" y="193.12" width="1.1850197" height="59.25098" fill="black"/>
-      </g>
-      <g id="Graphic_14">
-        <rect x="204.33868" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_13">
-        <rect x="244.10416" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_12">
-        <rect x="284.18395" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_20">
-        <rect x="224.2202" y="204.9702" width="1.1850197" height="47.400786" fill="black"/>
-      </g>
-      <g id="Graphic_19">
-        <rect x="263.98568" y="204.9702" width="1.1850197" height="47.400786" fill="black"/>
-      </g>
-      <g id="Graphic_18">
-        <rect x="304.06548" y="204.9702" width="1.1850197" height="47.400786" fill="black"/>
-      </g>
-      <g id="Graphic_17">
-        <rect x="204.33868" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_16">
-        <rect x="244.10416" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_15">
-        <rect x="284.18395" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_26">
-        <rect x="234.08482" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_25">
-        <rect x="254.1235" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_24">
-        <rect x="294.2033" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_23">
-        <rect x="194.31934" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_22">
-        <rect x="214.47652" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_21">
-        <rect x="274.1646" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_29">
-        <rect x="324.2613" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_28">
-        <rect x="334.28066" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-      <g id="Graphic_27">
-        <rect x="314.24198" y="212.53062" width="1.1850197" height="39.84036" fill="black"/>
-      </g>
-    </g>
-  </g>
+<svg width="161" height="60" viewBox="0 0 161 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.485 0.119995H0.299988V59.371H1.485V0.119995Z" fill="white"/>
+<path d="M21.5237 19.5306H20.3387V59.371H21.5237V19.5306Z" fill="white"/>
+<path d="M61.2892 19.5306H60.1041V59.371H61.2892V19.5306Z" fill="white"/>
+<path d="M101.369 19.5306H100.184V59.371H101.369V19.5306Z" fill="white"/>
+<path d="M41.4052 11.9702H40.2202V59.371H41.4052V11.9702Z" fill="white"/>
+<path d="M81.1707 11.9702H79.9857V59.371H81.1707V11.9702Z" fill="white"/>
+<path d="M121.25 11.9702H120.065V59.371H121.25V11.9702Z" fill="white"/>
+<path d="M21.5237 19.5306H20.3387V59.371H21.5237V19.5306Z" fill="white"/>
+<path d="M61.2892 19.5306H60.1041V59.371H61.2892V19.5306Z" fill="white"/>
+<path d="M101.369 19.5306H100.184V59.371H101.369V19.5306Z" fill="white"/>
+<path d="M51.2698 19.5306H50.0848V59.371H51.2698V19.5306Z" fill="white"/>
+<path d="M71.3085 19.5306H70.1235V59.371H71.3085V19.5306Z" fill="white"/>
+<path d="M111.388 19.5306H110.203V59.371H111.388V19.5306Z" fill="white"/>
+<path d="M11.5044 19.5306H10.3193V59.371H11.5044V19.5306Z" fill="white"/>
+<path d="M31.6615 19.5306H30.4765V59.371H31.6615V19.5306Z" fill="white"/>
+<path d="M91.3496 19.5306H90.1646V59.371H91.3496V19.5306Z" fill="white"/>
+<path d="M141.446 19.5306H140.261V59.371H141.446V19.5306Z" fill="white"/>
+<path d="M151.466 19.5306H150.281V59.371H151.466V19.5306Z" fill="white"/>
+<path d="M131.427 19.5306H130.242V59.371H131.427V19.5306Z" fill="white"/>
 </svg>
