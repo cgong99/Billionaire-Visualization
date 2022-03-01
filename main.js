@@ -85,10 +85,10 @@ function update_wealth_counter() {
     }
   }
   // else if (four_hundred_viewable()) {
-  //   if (four_hundred_counter_viewable()) {
-  //     let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
-  //     four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
-  //   }
+    // if (four_hundred_counter_viewable()) {
+    //   let wealth = (window.scrollX - four_hundred.offsetLeft + 175) * 500000;
+    //   four_hundred_counter.innerHTML = (wealth < 3200000000000) ? money.format(wealth) : "$3,200,000,000,000";
+    // }
   //   else {
   //     four_hundred_counter.innerHTML = '';
   //   }
@@ -110,21 +110,52 @@ function toggleZoom() {
   document.getElementById('line-chart').classList.toggle('zoom');
 }
 
-function pageScroll() {
-  window.scrollBy(5,0);
-  scrolldelay = setTimeout(pageScroll,100);
-}
+
 
 //Get the button:
 mybutton = document.getElementById("myBtn");
-scrollButton = document.getElementById("autoScroll");
-
+scrollButton = document.getElementById("Speed1");
+scrollButton2 = document.getElementById("Speed2");
+scrollButton3 = document.getElementById("Speed3");
 
 scrollButton.addEventListener('click', test());
 var doscroll = false;
 var myTimeout;
 function test(){
   console.log("toggled");
+}
+
+function speed1(){
+  toggleScroll();
+   if (doscroll){
+    autoScroll();
+
+  } else {
+    // stopScroll();
+    clearTimeout(myTimeout);
+  }
+}
+
+function speed2() {
+  toggleScroll();
+   if (doscroll){
+    autoScroll2();
+
+  } else {
+    // stopScroll();
+    clearTimeout(myTimeout);
+  }
+}
+
+function speed3() {
+  toggleScroll();
+   if (doscroll){
+    autoScroll3();
+
+  } else {
+    // stopScroll();
+    clearTimeout(myTimeout);
+  }
 }
 function toggleScroll(){
   if (doscroll) {
@@ -134,19 +165,25 @@ function toggleScroll(){
   }
   console.log(doscroll);
   console.log("clicked");
-  if (doscroll){
-    // autoScroll();
-    window.scrollBy(5,0);
-    myTimeout = setTimeout(autoScroll, 10)
-  } else {
-    // stopScroll();
-    clearTimeout(myTimeout);
-  }
+ 
+ }
+
+let s1 = 5
+let s2 = 20
+let s3 = 100
+function autoScroll() {
+  window.scrollBy(s1,0);
+  myTimeout = setTimeout(autoScroll, 10)
 }
 
-function autoScroll() {
-  window.scrollBy(5,0);
-  myTimeout = setTimeout(autoScroll, 10)
+function autoScroll2() {
+  window.scrollBy(s2,0);
+  myTimeout = setTimeout(autoScroll2, 10)
+}
+
+function autoScroll3() {
+  window.scrollBy(s3,0);
+  myTimeout = setTimeout(autoScroll2, 10)
 }
 
 
@@ -161,21 +198,33 @@ function leftFunction() {
 }
 
 
-
+car = document.getElementsByClassName('car');
 function scrollFunction() {
-  if (document.body.scrollLeft > 20 || document.documentElement.scrollLeft > 20) {
+  if (document.body.scrollLeft > 100 || document.documentElement.scrollLeft > 100) {
     mybutton.style.display = "block";
     scrollButton.style.display = "block";
+    scrollButton2.style.display = "block";
+    scrollButton3.style.display = "block";
+    car.style.display = "block";
   } else {
     mybutton.style.display = "none";
     scrollButton.style.display = "none";
+    scrollButton2.style.display = "none";
+    scrollButton3.style.display = "none";
+    car.style.display = "none";
   }
-  if (document.body.scrollLeft > 20 || document.documentElement.scrollLeft > 20) {
+  if (document.body.scrollLeft > 100 || document.documentElement.scrollLeft > 100) {
     mybutton.style.display = "block";
     scrollButton.style.display = "block";
+    scrollButton2.style.display = "block";
+    scrollButton3.style.display = "block";
+    car.style.display = "block";
   } else {
     mybutton.style.display = "none";
     scrollButton.style.display = "none";
+    scrollButton2.style.display = "none";
+    scrollButton3.style.display = "none";
+    car.style.display = "none";
   }
 }
 
